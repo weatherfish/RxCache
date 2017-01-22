@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/VictorAlbertos/RxCache.svg?branch=master)](https://travis-ci.org/VictorAlbertos/RxCache)
+[![Build Status](https://travis-ci.org/VictorAlbertos/RxCache.svg?branch=2.x)](https://travis-ci.org/VictorAlbertos/RxCache)
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxCache-green.svg?style=true)](https://android-arsenal.com/details/1/3016)
 
 # RxCache
 
-_For the a more reactive approach go [here](https://github.com/VictorAlbertos/ReactiveCache/tree/2.x)_.
+_For a more reactive approach go [here](https://github.com/VictorAlbertos/ReactiveCache/tree/2.x)_.
 
 The **goal** of this library is simple: **caching your data models like [Picasso](https://github.com/square/picasso) caches your images, with no effort at all.** 
 
@@ -41,8 +41,8 @@ allprojects {
 And add next dependencies in the build.gradle of the module:
 ```gradle
 dependencies {
-    compile "com.github.VictorAlbertos.RxCache:runtime:1.6.6-2.x"
-    compile "io.reactivex.rxjava2:rxjava:2.0.0-RC1"
+    compile "com.github.VictorAlbertos.RxCache:runtime:1.7.0-2.x"
+    compile "io.reactivex.rxjava2:rxjava:2.0.4"
 }
 ```
 
@@ -267,7 +267,7 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 dependencies {
     // apt command comes from the android-apt plugin
-    apt "com.github.VictorAlbertos.RxCache:compiler:1.6.6-2.x"
+    apt "com.github.VictorAlbertos.RxCache:compiler:1.7.0-2.x"
 }
 ```
 
@@ -469,6 +469,7 @@ The policy is very simple:
 ## Proguard
 ```
 -dontwarn io.rx_cache.internal.**
+-keepclassmembers enum io.rx_cache.Source { *; }
 ```
 
 
